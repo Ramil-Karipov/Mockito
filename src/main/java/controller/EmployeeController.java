@@ -1,12 +1,13 @@
 package controller;
 
-import com.example.collections.exceptoin.EmployeeNotFoundException;
-import com.example.collections.model.Employee;
-import com.example.collections.service.EmployeeService;
+
+import exceptoin.EmployeeNotFoundException;
+import model.Employee;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import service.EmployeeService;
 
 import java.util.ArrayList;
 import java.util.List;

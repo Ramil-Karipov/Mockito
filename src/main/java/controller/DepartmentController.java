@@ -1,13 +1,15 @@
 package controller;
 
-import com.example.collections.model.Employee;
-import com.example.collections.service.DepartmentService;
-import com.example.collections.service.EmployeeService;
+import model.Employee;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import service.DepartmentService;
+import service.EmployeeService;
 
+import java.util.List;
+import java.util.Map;
 @RestController
 
 public class DepartmentController {
@@ -39,7 +41,6 @@ public class DepartmentController {
         }
         return null;
     }
-
     @GetMapping("/departments")
     public Map<Integer, List<Employee>> getAllEmployeesByDepartment() {
         return departmentService.getAllEmployeesByDepartment();
@@ -50,4 +51,6 @@ public class DepartmentController {
         List<Employee> employees = departmentService.getEmployeesByDepartmentId(id);
         return employees;
     }
+
+
 }
